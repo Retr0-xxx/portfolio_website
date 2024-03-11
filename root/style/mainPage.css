@@ -1,9 +1,18 @@
+header{
+    background-color: rgba(0, 0, 0, 0.85); /* Semi-transparent black */
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure the header is above other content */
+    backdrop-filter: blur(10px); /* Blur effect for the background */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+}
+
 .navbar ul{
     list-style-type: none;
-    background-color: hsl(0, 0%, 25%);
     padding: 0px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: 0%;
+    margin-left: 25%;
     overflow: hidden;
 }
 .navbar a{
@@ -19,4 +28,127 @@
 .navbar li{
     float: left;
 }
+
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+.bio{
+    margin-top: 50px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.bio h1{
+    margin-left: 5%;
+    font-size: 2.5em;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.bio img{
+    float: right; /* or 'right' if you prefer */
+    width: 230px; /* Fixed width of the image */
+    height: auto; /* Adjust the height automatically based on the width to maintain aspect ratio */
+    margin-left: 20px; /* Space between the image and the text */
+    border-radius: 10px;
+}
+
+.bio p{
+    font-size: large;
+    overflow: hidden; /* This ensures the text takes up the remaining space */
+}
+
+.bio::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.skills{
+    margin-top: 50px;
+    margin-left: 10%;
+    margin-right: 2%;
+}
+
+.hardware-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 550px)); /* Creates as many 500px wide columns as can fit in the container */
+    gap: 30px; /* Space between items */
+    justify-items: start; /* Center items within the container */
+}
+
+
+.hardware{
+    width: 500px; /* Fixed width for square shape */
+    height: 200px; /* Height equal to width to maintain square shape */
+    background-color: #f0f0f0; /* Light grey background, adjust as needed */
+    border-radius: 15px; /* Rounded edges */
+    justify-content: center; /* Horizontally center content */
+    align-items:center; /* Vertically center content */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth, adjust as needed */
+    padding: 20px; /* Padding inside the card, adjust as needed */
+    text-align: center; /* Ensure text is centered if you have text inside */
+}
+
+.hardware:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.projects{
+    margin-top: 50px;
+    margin-left: 10%;
+    margin-right: 2%;
+}
+
+.project-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 350px)); /* Creates as many 500px wide columns as can fit in the container */
+    gap: 30px; /* Space between items */
+    justify-items: start; /* Center items within the container */
+}
+
+.project{
+    display: flex;
+    width: 300px; /* Fixed width for square shape */
+    height: 200px; /* Height equal to width to maintain square shape */
+    background-color: #f0f0f0; /* Light grey background, adjust as needed */
+    border-radius: 15px; /* Rounded edges */
+    justify-content: center; /* Horizontally center content */
+    align-items:center; /* Vertically center content */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth, adjust as needed */
+    padding: 20px; /* Padding inside the card, adjust as needed */
+    text-align: center; /* Ensure text is centered if you have text inside */
+}
+
+.project:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.project img{
+    width: 100px;
+    height: 100px;
+    order: -1;
+    border-radius: 10px;
+}
+
+.subHeader-container h1{
+    size: 2.5em;
+}
+
+.subHeader-container h3{
+    color: gray;
+}
+
+.subHeader-container h1, h3{
+    display: inline-block; /* Or 'inline' if you don't need to manipulate width/height */
+    margin-right: 10px; /* Adjust spacing between elements */
+}
+
 
