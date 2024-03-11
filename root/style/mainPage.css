@@ -1,3 +1,5 @@
+
+
 header{
     background-color: rgba(0, 0, 0, 0.85); /* Semi-transparent black */
     position: -webkit-sticky; /* For Safari */
@@ -70,19 +72,21 @@ body{
 .skills{
     margin-top: 50px;
     margin-left: 10%;
-    margin-right: 2%;
+    margin-right: 10%;
+    transform: scale(0.95);
+    animation: cardPopUp 1s ease-out forwards;
 }
 
 .hardware-container{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 550px)); /* Creates as many 500px wide columns as can fit in the container */
+    grid-template-columns:1fr 1fr; /* Creates as many 500px wide columns as can fit in the container */
     gap: 30px; /* Space between items */
     justify-items: start; /* Center items within the container */
 }
 
 
 .hardware{
-    width: 500px; /* Fixed width for square shape */
+    width: 90%; /* Fixed width for square shape */
     height: 200px; /* Height equal to width to maintain square shape */
     background-color: #f0f0f0; /* Light grey background, adjust as needed */
     border-radius: 15px; /* Rounded edges */
@@ -92,6 +96,8 @@ body{
     box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth, adjust as needed */
     padding: 20px; /* Padding inside the card, adjust as needed */
     text-align: center; /* Ensure text is centered if you have text inside */
+    transform: scale(0.95);
+    animation: cardPopUp 1s ease-out forwards;
 }
 
 .hardware:hover{
@@ -102,19 +108,21 @@ body{
 .projects{
     margin-top: 50px;
     margin-left: 10%;
-    margin-right: 2%;
+    margin-right: 10%;
+    transform: scale(0.95);
+    animation: cardPopUp 1s ease-out forwards;
 }
 
 .project-container{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 350px)); /* Creates as many 500px wide columns as can fit in the container */
+    grid-template-columns: 1fr 1fr 1fr; /* Creates as many 500px wide columns as can fit in the container */
     gap: 30px; /* Space between items */
     justify-items: start; /* Center items within the container */
 }
 
 .project{
     display: flex;
-    width: 300px; /* Fixed width for square shape */
+    width: 90%; /* Fixed width for square shape */
     height: 200px; /* Height equal to width to maintain square shape */
     background-color: #f0f0f0; /* Light grey background, adjust as needed */
     border-radius: 15px; /* Rounded edges */
@@ -124,6 +132,8 @@ body{
     box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth, adjust as needed */
     padding: 20px; /* Padding inside the card, adjust as needed */
     text-align: center; /* Ensure text is centered if you have text inside */
+    transform: scale(0.95);
+    animation: cardPopUp 1s ease-out forwards;
 }
 
 .project:hover{
@@ -136,6 +146,37 @@ body{
     height: 100px;
     order: -1;
     border-radius: 10px;
+}
+
+.educations{
+    margin-top: 50px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.education-container{
+    display: grid;
+    grid-template-columns: 1f; /* Creates as many 500px wide columns as can fit in the container */
+    gap: 30px; /* Space between items */
+    justify-items: start; /* Center items within the container */
+}
+
+.education{
+    width: 90%; /* Fixed width for square shape */
+    height: 200px; /* Height equal to width to maintain square shape */
+    background-color: #f0f0f0; /* Light grey background, adjust as needed */
+    border-radius: 15px; /* Rounded edges */
+    justify-content: center; /* Horizontally center content */
+    align-items:center; /* Vertically center content */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth, adjust as needed */
+    padding: 20px; /* Padding inside the card, adjust as needed */
+    text-align: center; /* Ensure text is centered if you have text inside */
+}
+
+.education:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 .subHeader-container h1{
@@ -151,4 +192,14 @@ body{
     margin-right: 10px; /* Adjust spacing between elements */
 }
 
+@keyframes cardPopUp {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+}
 
