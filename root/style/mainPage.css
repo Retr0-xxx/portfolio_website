@@ -90,6 +90,7 @@ body{
     margin-right: 0%;
     transform: scale(0.95);
     animation: cardPopUp 1s ease-out forwards;
+    position: relative;
 }
 
 .hardware-container{
@@ -100,15 +101,64 @@ body{
     overflow-x: scroll;
     padding-top: 30px; /* Space for the scrollbar */;
     padding-bottom: 30px; /* Space for the scrollbar */
+    position: relative;
     
 }
+
+.btnR {
+    position: absolute;
+    right: 3vw; /* Adjust as necessary to place it at the desired location */
+    top: 50%; /* Centers the button vertically, adjust as needed */
+    z-index: 10; /* Ensure the button is above other content */
+    width: 70px; /* Adjust the width as needed */
+    height: 70px; /* Make sure height is equal to width for a perfect circle */
+    border-radius: 50%; /* This creates the round shape */
+    border: none; /* Optional: removes the default border */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    background-color: rgba(0,0,0,0.05);
+    color: #333; /* Adjust text color as needed */
+    font-size: 30px; /* Makes the arrow larger */
+    backdrop-filter: blur(10px); /* Blur effect for the background */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+}
+
+.btnR:hover {
+    transform: scale(1.1); /* Slightly increase the button size */
+    background-color: rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Optional: adds a shadow for better visibility */
+}
+
+.btnL {
+    position: absolute;
+    left: 3vw; /* Adjust as necessary to place it at the desired location */
+    top: 50%; /* Centers the button vertically, adjust as needed */
+    z-index: 10; /* Ensure the button is above other content */
+    width: 70px; /* Adjust the width as needed */
+    height: 70px; /* Make sure height is equal to width for a perfect circle */
+    border-radius: 50%; /* This creates the round shape */
+    border: none; /* Optional: removes the default border */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    background-color: rgba(0,0,0,0.05);
+    color: #333; /* Adjust text color as needed */
+    font-size: 30px; /* Makes the arrow larger */
+    backdrop-filter: blur(10px); /* Blur effect for the background */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+}
+
+.btnL:hover {
+    transform: scale(1.1); /* Slightly increase the button size */
+    background-color: rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Optional: adds a shadow for better visibility */
+}
+
+
 
 .hardware-container::-webkit-scrollbar {
     display: none;
 }
 
 .hardware-holder{
-    width: 100px; /* Fixed width for square shape */
+    width: 10vw; /* Fixed width for square shape */
     height: 200px; /* Height equal to width to maintain square shape */;
     color: transparent;
 }
@@ -246,7 +296,7 @@ body{
 }
 
 .subHeader-container{
-    margin-left: 20%;
+    margin-left: 15%;
 }
 
 .subHeader-container h1{
