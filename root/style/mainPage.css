@@ -51,11 +51,25 @@ body{
     margin-bottom: 0;
 }
 
+
+.sbs{
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.sbs p{
+    line-height: 1.6;
+}
+
+.sbs p::f{
+    font-size: 1.5em;
+}
+
 .bio img{
     float: right; /* or 'right' if you prefer */
     width: 230px; /* Fixed width of the image */
     height: auto; /* Adjust the height automatically based on the width to maintain aspect ratio */
-    margin-left: 20px; /* Space between the image and the text */
+    margin-left: 50px; /* Space between the image and the text */
     border-radius: 10px;
 }
 
@@ -72,22 +86,35 @@ body{
 
 .skills{
     margin-top: 50px;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 0%;
+    margin-right: 0%;
     transform: scale(0.95);
     animation: cardPopUp 1s ease-out forwards;
 }
 
 .hardware-container{
     display: grid;
-    grid-template-columns:1fr 1fr; /* Creates as many 500px wide columns as can fit in the container */
+    grid-auto-flow: column;
     gap: 30px; /* Space between items */
-    justify-items: start; /* Center items within the container */
+    scroll-behavior: smooth; 
+    overflow-x: scroll;
+    padding-top: 30px; /* Space for the scrollbar */;
+    padding-bottom: 30px; /* Space for the scrollbar */
+    
 }
 
+.hardware-container::-webkit-scrollbar {
+    display: none;
+}
+
+.hardware-holder{
+    width: 100px; /* Fixed width for square shape */
+    height: 200px; /* Height equal to width to maintain square shape */;
+    color: transparent;
+}
 
 .hardware{
-    width: 90%; /* Fixed width for square shape */
+    width: 500px; /* Fixed width for square shape */
     height: 200px; /* Height equal to width to maintain square shape */
     background-color: #f0f0f0; /* Light grey background, adjust as needed */
     border-radius: 15px; /* Rounded edges */
@@ -216,6 +243,10 @@ body{
     margin-left: 10%;
     margin-right: 10%;
     margin-bottom: 200px;
+}
+
+.subHeader-container{
+    margin-left: 20%;
 }
 
 .subHeader-container h1{
