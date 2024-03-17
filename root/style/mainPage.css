@@ -90,10 +90,13 @@ body{
     margin-right: 0%;
     transform: scale(0.95);
     animation: cardPopUp 1s ease-out forwards;
+}
+
+.skills, .projects, .experiences {
     position: relative;
 }
 
-.hardware-container{
+.hardware-container, .project-container, .exp-container{
     display: grid;
     grid-auto-flow: column;
     gap: 30px; /* Space between items */
@@ -105,7 +108,7 @@ body{
     
 }
 
-.btnR {
+.btnR_hard, .btnR_proj, .btnR_exp{
     position: absolute;
     right: 3vw; /* Adjust as necessary to place it at the desired location */
     top: 50%; /* Centers the button vertically, adjust as needed */
@@ -122,13 +125,13 @@ body{
     -webkit-backdrop-filter: blur(10px); /* For Safari */
 }
 
-.btnR:hover {
+.btnR_hard:hover,.btnR_proj:hover, .btnR_exp:hover{
     transform: scale(1.1); /* Slightly increase the button size */
     background-color: rgba(0,0,0,0.1);
     box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Optional: adds a shadow for better visibility */
 }
 
-.btnL {
+.btnL_hard, .btnL_proj, .btnL_exp{
     position: absolute;
     left: 3vw; /* Adjust as necessary to place it at the desired location */
     top: 50%; /* Centers the button vertically, adjust as needed */
@@ -145,7 +148,7 @@ body{
     -webkit-backdrop-filter: blur(10px); /* For Safari */
 }
 
-.btnL:hover {
+.btnL_hard:hover, .btnL_proj:hover, .btnL_exp:hover{
     transform: scale(1.1); /* Slightly increase the button size */
     background-color: rgba(0,0,0,0.1);
     box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Optional: adds a shadow for better visibility */
@@ -153,29 +156,30 @@ body{
 
 
 
-.hardware-container::-webkit-scrollbar {
+.hardware-container::-webkit-scrollbar, .project-container::-webkit-scrollbar, .education-container::-webkit-scrollbar, .exp-container::-webkit-scrollbar {
     display: none;
 }
 
-.hardware-holder{
+.holder{
     width: 10vw; /* Fixed width for square shape */
-    height: 200px; /* Height equal to width to maintain square shape */;
+    height: 150px; /* Height equal to width to maintain square shape */;
     color: transparent;
 }
 
 .hardware{
     width: 500px; /* Fixed width for square shape */
-    height: 200px; /* Height equal to width to maintain square shape */
+    height: 150px; /* Height equal to width to maintain square shape */
     background-color: #f0f0f0; /* Light grey background, adjust as needed */
     border-radius: 15px; /* Rounded edges */
     justify-content: center; /* Horizontally center content */
     align-items:center; /* Vertically center content */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
     box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth, adjust as needed */
-    padding: 20px; /* Padding inside the card, adjust as needed */
+    padding: 10px; /* Padding inside the card, adjust as needed */
     text-align: center; /* Ensure text is centered if you have text inside */
     transform: scale(0.95);
     animation: cardPopUp 1s ease-out forwards;
+    
 }
 
 .hardware:hover{
@@ -185,23 +189,16 @@ body{
 
 .projects{
     margin-top: 50px;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 0%;
+    margin-right: 0%;
     transform: scale(0.95);
     animation: cardPopUp 1s ease-out forwards;
 }
 
-.project-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr; /* Creates as many 500px wide columns as can fit in the container */
-    gap: 30px; /* Space between items */
-    justify-items: start; /* Center items within the container */
-}
 
 .project{
-    display: flex;
-    width: 90%; /* Fixed width for square shape */
-    height: 200px; /* Height equal to width to maintain square shape */
+    width: 400px; /* Fixed width for square shape */
+    height: 400px; /* Height equal to width to maintain square shape */
     background-color: #f0f0f0; /* Light grey background, adjust as needed */
     border-radius: 15px; /* Rounded edges */
     justify-content: center; /* Horizontally center content */
@@ -220,9 +217,9 @@ body{
 }
 
 .project img{
-    width: 100px;
-    height: 100px;
-    order: -1;
+    width: 100%;
+    height: auto;
+    order: 1;
     border-radius: 10px;
 }
 
@@ -259,19 +256,13 @@ body{
 
 .experiences{
     margin-top: 50px;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 0%;
+    margin-right: 0%;
 }
 
-.exp-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr; /* Creates as many 500px wide columns as can fit in the container */
-    gap: 30px; /* Space between items */
-    justify-items: start; /* Center items within the container */
-}
 
 .exp{
-    width: 90%; /* Fixed width for square shape */
+    width: 400px; /* Fixed width for square shape */
     height: 200px; /* Height equal to width to maintain square shape */
     background-color: #f0f0f0; /* Light grey background, adjust as needed */
     border-radius: 15px; /* Rounded edges */

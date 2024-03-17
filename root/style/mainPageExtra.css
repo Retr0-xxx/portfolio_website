@@ -1,0 +1,8 @@
+.hardware p span {
+    background-color: white; /* Light grey background */
+    border: 3px solid white; /* Grey border */
+    border-radius: 7px; /* Rounded corners */
+    padding: 2px 6px; /* Top/bottom, left/right padding */
+    margin: 7px; /* Space between each box */
+    display: inline-block; /* Align boxes in a line */
+}
