@@ -6,3 +6,36 @@
     margin: 7px; /* Space between each box */
     display: inline-block; /* Align boxes in a line */
 }
+
+.course span {
+    background-color: white; /* Light grey background */
+    border: 3px solid white; /* Grey border */
+    border-radius: 7px; /* Rounded corners */
+    padding: 2px 6px; /* Top/bottom, left/right padding */
+    margin: 7px; /* Space between each box */
+    display: inline-block; /* Align boxes in a line */
+}
+
+.havoc{
+    background-color: black;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.7); /* Subtle shadow for depth, adjust as needed */
+    color: white;
+}
+
+.havoc:hover{
+   box-shadow: 0 10px 30px rgba(0,0,0,1) ;
+}
+
+.havoc ul{
+    align-items:flex-end;
+    text-align: left; /* Aligns the lines to the left */
+} 
+
+.RISC{
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Subtle shadow for depth, adjust as needed */
+    background-color: white;
+}
+
+.italic{
+    font-style: italic;
+}

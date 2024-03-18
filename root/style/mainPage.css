@@ -198,7 +198,7 @@ body{
 
 .project{
     width: 400px; /* Fixed width for square shape */
-    height: 400px; /* Height equal to width to maintain square shape */
+    height: 450px; /* Height equal to width to maintain square shape */
     background-color: #f0f0f0; /* Light grey background, adjust as needed */
     border-radius: 15px; /* Rounded edges */
     justify-content: center; /* Horizontally center content */
@@ -290,6 +290,7 @@ body{
     margin-left: 15%;
 }
 
+
 .subHeader-container h1{
     size: 2.5em;
 }
@@ -301,6 +302,11 @@ body{
 .subHeader-container h1, h3{
     display: inline-block; /* Or 'inline' if you don't need to manipulate width/height */
     margin-right: 10px; /* Adjust spacing between elements */
+}
+
+.project ul{
+    align-items:flex-end;
+    text-align: left; /* Aligns the lines to the left */
 }
 
 @keyframes cardPopUp {

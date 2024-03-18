@@ -45,4 +45,8 @@ document.addEventListener('DOMContentLoaded', function() {
         let innerHTML = elem.textContent.split(',').map(word => `<span>${word} </span>`).join('');
         elem.innerHTML = innerHTML;
       });
+      document.querySelectorAll('.course').forEach((elem) => {
+        let innerHTML = elem.textContent.split(',').map(word => `<span>${word} </span>`).join('');
+        elem.innerHTML = innerHTML;
+      });
 });
