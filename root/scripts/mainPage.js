@@ -1,5 +1,45 @@
+const text1 = "Hello! My name is Eric, and I am pursuing a degree in Computer Engineering at the University of British Columbia. Currently, I am engaged in the roles of a game developer and hardware engineer. My portfolio includes the development of a Unity-based shooting game, which is available on Steam, and an innovative project using Raspberry Pi technology."; // The text to type out
+const text2 = "My passion for design and creation is the driving force behind my endeavors. Although I may not fit the traditional image of an artist, I view myself as one at heart, relishing the opportunity to apply my creativity towards solving open-ended problems. This artistic approach to engineering challenges distinguishes my work and fuels my continuous pursuit of innovation and excellence in the field.";
+let index = 0; // Start at the beginning of the text
+let index2 = 0;
+
+function typeText() {
+    if (index < text1.length) { // Check if there's more text to type
+        document.querySelector('.type').textContent += text1.charAt(index);
+        index++;
+        setTimeout(typeText, 5); // Adjust typing speed (milliseconds)
+    }
+    if(index == text1.length){
+        if (index2 < text2.length) { // Check if there's more text to type
+            document.querySelector('.type2').textContent += text2.charAt(index2);
+            index2++;
+            setTimeout(typeText, 8); // Adjust typing speed (milliseconds)
+        }
+    }
+    if(index2 == text2.length){
+        showRest();
+    }
+}
+
+function showRest() {
+    const sectionsToShow = document.querySelectorAll('.skills, .projects, .educations, .experiences, .about');
+    sectionsToShow.forEach(section => {
+        section.style.display = ''; // Or use 'block', 'flex', etc., depending on your layout
+    });
+}
+
+function hideRest() {
+    const sectionsToHide = document.querySelectorAll('.skills, .projects, .educations, .experiences, .about');
+    sectionsToHide.forEach(section => {
+        section.style.display = 'none';
+    });
+}
+
+
 document.addEventListener('DOMContentLoaded', function() {
-        document.querySelector('.btnL_hard').addEventListener('click', function() {
+    hideRest();
+    typeText(); // Start typing out the text
+    document.querySelector('.btnL_hard').addEventListener('click', function() {
         // Scroll left
         document.querySelector('.hardware-container').scrollBy({
             left: -200, // Adjust scroll amount (px)

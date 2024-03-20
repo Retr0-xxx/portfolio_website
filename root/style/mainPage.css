@@ -1,7 +1,10 @@
 
+html{
+    background-color: #f5f5f7;
+}
 
 header{
-    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+    background-color: rgba(256, 256, 256, 0.8); /* Semi-transparent black */
     position: -webkit-sticky; /* For Safari */
     position: sticky;
     top: 0;
@@ -19,14 +22,14 @@ header{
     overflow: hidden;
 }
 .navbar a{
-    color: white;
+    color: black;
     text-decoration: none;
     padding: 15px;
     display: block;
     text-align: center;
 }
 .navbar a:hover{
-    background-color: hsl(0, 0%, 10%);
+    background-color: hsl(0, 0%, 72%);
 }
 .navbar li{
     float: left;
@@ -40,15 +43,22 @@ body{
 
 .bio{
     margin-top: 50px;
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 13%;
+    margin-right: 13%;
 }
 
 .bio h1{
-    margin-left: 5%;
-    font-size: 2.5em;
+    margin-left: 0;
+    font-size: 4em;
     margin-top: 0;
     margin-bottom: 0;
+    display: inline-block;
+}
+
+.bio h2{
+    color: gray;
+    font-size: 2em;
+    margin-left: 5%;
 }
 
 
@@ -90,6 +100,16 @@ body{
     margin-right: 0%;
     transform: scale(0.95);
     animation: cardPopUp 1s ease-out forwards;
+    position: relative;
+}
+
+.skills img{
+    width: 120px;
+    height: auto;
+    z-index: -100;
+    position: absolute;
+    top: -10%;
+    left: 10%;
 }
 
 .skills, .projects, .experiences {
@@ -169,7 +189,7 @@ body{
 .hardware{
     width: 500px; /* Fixed width for square shape */
     height: 150px; /* Height equal to width to maintain square shape */
-    background-color: #f0f0f0; /* Light grey background, adjust as needed */
+    background-color: white; /* Light grey background, adjust as needed */
     border-radius: 15px; /* Rounded edges */
     justify-content: center; /* Horizontally center content */
     align-items:center; /* Vertically center content */
@@ -179,7 +199,6 @@ body{
     text-align: center; /* Ensure text is centered if you have text inside */
     transform: scale(0.95);
     animation: cardPopUp 1s ease-out forwards;
-    
 }
 
 .hardware:hover{
@@ -199,7 +218,7 @@ body{
 .project{
     width: 400px; /* Fixed width for square shape */
     height: 450px; /* Height equal to width to maintain square shape */
-    background-color: #f0f0f0; /* Light grey background, adjust as needed */
+    background-color: white; /* Light grey background, adjust as needed */
     border-radius: 15px; /* Rounded edges */
     justify-content: center; /* Horizontally center content */
     align-items:center; /* Vertically center content */
@@ -225,7 +244,7 @@ body{
 
 .educations{
     margin-top: 50px;
-    margin-left: 10%;
+    margin-left: 12%;
     margin-right: 10%;
 }
 
@@ -239,7 +258,7 @@ body{
 .education{
     width: 90%; /* Fixed width for square shape */
     height: 200px; /* Height equal to width to maintain square shape */
-    background-color: #f0f0f0; /* Light grey background, adjust as needed */
+    background-color: white; /* Light grey background, adjust as needed */
     border-radius: 15px; /* Rounded edges */
     justify-content: center; /* Horizontally center content */
     align-items:center; /* Vertically center content */
@@ -264,7 +283,7 @@ body{
 .exp{
     width: 400px; /* Fixed width for square shape */
     height: 200px; /* Height equal to width to maintain square shape */
-    background-color: #f0f0f0; /* Light grey background, adjust as needed */
+    background-color: white; /* Light grey background, adjust as needed */
     border-radius: 15px; /* Rounded edges */
     justify-content: center; /* Horizontally center content */
     align-items:center; /* Vertically center content */
@@ -287,12 +306,12 @@ body{
 }
 
 .subHeader-container{
-    margin-left: 15%;
+    margin-left: 12.5%;
 }
 
 
 .subHeader-container h1{
-    size: 2.5em;
+    size: 4em;
 }
 
 .subHeader-container h3{
