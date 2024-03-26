@@ -53,18 +53,21 @@ body{
     margin-top: 0;
     margin-bottom: 0;
     display: inline-block;
+    animation: cardPopUp 1s ease-out forwards;
 }
 
 .bio h2{
     color: gray;
     font-size: 2em;
     margin-left: 5%;
+    animation: cardPopUp 1s ease-out forwards;
 }
 
 
 .sbs{
     margin-top: 40px;
     margin-bottom: 20px;
+    animation: cardPopUp 1s ease-out forwards;
 }
 
 .sbs p{
@@ -84,7 +87,8 @@ body{
 }
 
 .bio p{
-    font-size: large;
+    font-size: 1.3em;
+    font-weight: 400;
     overflow: hidden; /* This ensures the text takes up the remaining space */
 }
 
@@ -198,12 +202,12 @@ body{
     padding: 10px; /* Padding inside the card, adjust as needed */
     text-align: center; /* Ensure text is centered if you have text inside */
     transform: scale(0.95);
-    animation: cardPopUp 1s ease-out forwards;
+   /* animation: cardPopUp 1s ease-out forwards;*/
 }
 
 .hardware:hover{
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
 .projects{
@@ -227,12 +231,12 @@ body{
     padding: 20px; /* Padding inside the card, adjust as needed */
     text-align: center; /* Ensure text is centered if you have text inside */
     transform: scale(0.95);
-    animation: cardPopUp 1s ease-out forwards;
+  /*  animation: cardPopUp 1s ease-out forwards;*/
 }
 
 .project:hover{
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
 .project img{
@@ -270,7 +274,7 @@ body{
 
 .education:hover{
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
 .experiences{
@@ -295,7 +299,7 @@ body{
 
 .exp:hover{
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
 .about{
