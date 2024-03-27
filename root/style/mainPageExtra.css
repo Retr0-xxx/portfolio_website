@@ -62,3 +62,25 @@
     font-family: monospace; /* Gives it a typewriter-like font */
 }
 
+.scrollIndicator {
+  position: fixed;
+  width: 0%; /* Initial width is 0, it will be updated by JavaScript */
+  height: 10px; /* Adjust the height as needed */
+  background-color: #3498db; /* Choose your color */
+  z-index: 100; /* Ensure it's above other content */
+}
+
+.scrollBack {
+  position: fixed;
+  width: 100%; /* Initial width is 0, it will be updated by JavaScript */
+  height: 10px; /* Adjust the height as needed */
+  background-color: #9ecce3; /* Choose your color */
+  z-index: 90; /* Ensure it's above other content */
+}
+
+.contact {
+    margin-top: 50px;
+    margin-left: 12.5%;
+    margin-right: 10%;
+}
+ 

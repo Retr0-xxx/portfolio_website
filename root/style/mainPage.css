@@ -19,17 +19,24 @@ header{
     padding: 0px;
     margin-top: 0%;
     margin-left: 25%;
+    margin-bottom: 0%;
     overflow: hidden;
 }
-.navbar a{
+.navbar button{
     color: black;
-    text-decoration: none;
     padding: 15px;
     display: block;
     text-align: center;
+    background-color: transparent; /* Add background color property */
+    border: none; /* Add border property */
+    cursor: pointer; /* Add cursor property */
+    font-size: 1em;
+    font-weight: 400;
+    border-radius: 10px;
 }
-.navbar a:hover{
-    background-color: hsl(0, 0%, 72%);
+.navbar button:hover{
+    transform: scale(1.2);
+    font-weight: 600;
 }
 .navbar li{
     float: left;
@@ -285,7 +292,7 @@ body{
 
 
 .exp{
-    width: 400px; /* Fixed width for square shape */
+    width: 600px; /* Fixed width for square shape */
     height: 200px; /* Height equal to width to maintain square shape */
     background-color: white; /* Light grey background, adjust as needed */
     border-radius: 15px; /* Rounded edges */
@@ -304,7 +311,7 @@ body{
 
 .about{
     margin-top: 50px;
-    margin-left: 10%;
+    margin-left: 12.5%;
     margin-right: 10%;
     margin-bottom: 200px;
 }

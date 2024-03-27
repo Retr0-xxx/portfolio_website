@@ -22,14 +22,14 @@ function typeText() {
 }
 
 function showRest() {
-    const sectionsToShow = document.querySelectorAll('.skills, .projects, .educations, .experiences, .about');
+    const sectionsToShow = document.querySelectorAll('.skills, .projects, .educations, .experiences, .about, .contact');
     sectionsToShow.forEach(section => {
         section.style.display = ''; // Or use 'block', 'flex', etc., depending on your layout
     });
 }
 
 function hideRest() {
-    const sectionsToHide = document.querySelectorAll('.skills, .projects, .educations, .experiences, .about');
+    const sectionsToHide = document.querySelectorAll('.skills, .projects, .educations, .experiences, .about, .contact');
     sectionsToHide.forEach(section => {
         section.style.display = 'none';
     });
@@ -89,4 +89,38 @@ document.addEventListener('DOMContentLoaded', function() {
         let innerHTML = elem.textContent.split(',').map(word => `<span>${word} </span>`).join('');
         elem.innerHTML = innerHTML;
       });
+    document.getElementById('b1').addEventListener('click', function() {
+        document.querySelector('.projects').scrollIntoView({behavior: 'smooth'});
+    });
+    document.getElementById('b2').addEventListener('click', function() {
+        document.querySelector('.skills').scrollIntoView({behavior: 'smooth'});
+    });
+    document.getElementById('b3').addEventListener('click', function() {
+        document.querySelector('.educations').scrollIntoView({behavior: 'smooth'});
+    });
+    document.getElementById('b4').addEventListener('click', function() {
+        document.querySelector('.experiences').scrollIntoView({behavior: 'smooth'});
+    });
+    document.getElementById('b5').addEventListener('click', function() {
+        document.querySelector('.contact').scrollIntoView({behavior: 'smooth'});
+    });
+
 });
+
+updateScrollIndicator();
+
+function updateScrollIndicator() {
+    // Calculate the scroll percentage
+    const scrollY = window.scrollY || window.pageYOffset;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (scrollY / height) * 100;
+    const scrollIndicator = document.querySelector('.scrollIndicator');
+    if (scrollIndicator) {
+        scrollIndicator.style.width = `${scrolled}%`;
+    }
+}
+
+// Event listener for scroll event
+window.onscroll = function() {
+    updateScrollIndicator();
+};
